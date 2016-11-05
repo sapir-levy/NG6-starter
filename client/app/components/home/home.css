@@ -1,0 +1,31 @@
+.header{
+  position: fixed;
+}
+
+.main-content{
+  margin: 110px auto;
+}
+
+#tea-party-banner{
+  width: 100%;
+  height: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.exclusive-collection-container{
+  margin-left: 30px;
+}
+
+.exc-col-title{
+  font-size: 30px;
+}
+
+.teas-container{
+  margin: 40px;
+}
+
+.tea-thum{
+  margin: 20px 30px;
+}

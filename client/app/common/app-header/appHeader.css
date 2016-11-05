@@ -1,0 +1,36 @@
+.header{
+  position:fixed;
+  background-color: white;
+  width:100%;
+  top:0px;
+}
+
+.logo-container {
+  float:left;
+}
+
+.right-side {
+  float: right;
+  width: 65%;
+  height: 100%;
+}
+
+.navbar{
+  float:left;
+
+}
+
+.logo {
+  display: inline-block;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-left: 20px;
+  width: 380px;
+}
+
+
+.shopping-cart {
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+}

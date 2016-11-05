@@ -1,6 +1,6 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-import './home.styl';
+import './home.css';
 
 const homeModule = angular.module('home', [
   uiRouter

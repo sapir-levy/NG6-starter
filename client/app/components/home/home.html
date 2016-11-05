@@ -1,9 +1,15 @@
-<navbar></navbar>
-<header>
-  <hero></hero>
-</header>
-<main>
-  <div>
-    <h1>Found in {{ $ctrl.name }}.html</h1>
+<app-header></app-header>
+<div class="main-content">
+  <div class="banner">
+    <img id="tea-party-banner" src="../../../img/cover/362129.jpg"/>
   </div>
-</main>
+  <div class="exclusive-collection-container">
+    <h3 class="exc-col-title">Our Exclusive Collection...</h3>
+    <div class="teas-container text-center">
+      <tea-thumbnail class="tea-thum"></tea-thumbnail>
+      <tea-thumbnail class="tea-thum"></tea-thumbnail>
+      <tea-thumbnail class="tea-thum"></tea-thumbnail>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

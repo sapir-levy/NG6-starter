@@ -1,15 +1,17 @@
 import angular from 'angular';
 import angularAnimate from 'angular-animate';
-import 'angular-material';
+import angularMaterial from 'angular-material';
 import uiRouter from 'angular-ui-router';
 import Common from './common/common';
 import Components from './components/components';
 import AppComponent from './app.component';
 import 'normalize.css';
+import 'angular-material/angular-material.css';
 
 angular.module('app', [
   uiRouter,
   angularAnimate,
+  angularMaterial,
   Common,
   Components
 ])
@@ -21,3 +23,4 @@ angular.module('app', [
   })
 
   .component('app', AppComponent);
+

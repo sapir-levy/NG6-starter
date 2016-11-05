@@ -2,12 +2,9 @@
  * Created by Sapir on 03/11/2016.
  */
 import angular from 'angular';
-import uiRouter from 'angular-ui-router';
-import './navbar.styl';
+import './navbar.css'
 
-const navbarModule = angular.module('navbar', [
-  uiRouter
-]);
+const navbarModule = angular.module('navbar', []);
 
 class NavbarController {
   constructor() {
@@ -22,17 +19,6 @@ navbarModule.component('navbar', {
   controllerAs: 'navCtrl'
 });
 
-navbarModule.config(($stateProvider, $urlRouterProvider) => {
-  "ngInject";
-
-  $urlRouterProvider.otherwise('/');
-
-  $stateProvider
-    .state('navbar', {
-      url: '/',
-      component: 'navbar'
-    });
-});
 
 export default navbarModule.name;
 

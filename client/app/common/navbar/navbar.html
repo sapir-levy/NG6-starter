@@ -1,34 +1,29 @@
-<nav class="navbar">
-  <div class="logo">
-    <a ui-sref="home"><img src="../" alt="logo"/></a>
-  </div>
-  <md-menu-bar>
-    <md-menu>
-      <button ng-click="$mdMenu.open()">
-        File
-      </button>
-      <md-menu-content>
-        <md-menu-item>
-          <md-button ng-click="navCtrl.sampleAction('share', $event)">
-            Share...
-          </md-button>
-        </md-menu-item>
-        <md-menu-divider></md-menu-divider>
-        <md-menu-item>
-          <md-menu-item>
-            <md-menu>
-              <md-button ng-click="$mdMenu.open()">New</md-button>
-              <md-menu-content>
-                <md-menu-item><md-button ng-click="navCtrl.sampleAction('New Document', $event)">Document</md-button></md-menu-item>
-                <md-menu-item><md-button ng-click="navCtrl.sampleAction('New Spreadsheet', $event)">Spreadsheet</md-button></md-menu-item>
-                <md-menu-item><md-button ng-click="navCtrl.sampleAction('New Presentation', $event)">Presentation</md-button></md-menu-item>
-                <md-menu-item><md-button ng-click="navCtrl.sampleAction('New Form', $event)">Form</md-button></md-menu-item>
-                <md-menu-item><md-button ng-click="navCtrl.sampleAction('New Drawing', $event)">Drawing</md-button></md-menu-item>
-              </md-menu-content>
-            </md-menu>
-          </md-menu-item>
-        </md-menu-item>
-      </md-menu-content>
-    </md-menu>
-  </md-menu-bar>
-</nav>
+<md-menu-bar class="menu-bar">
+  <span class="main-menu-item">
+    <md-button>Home</md-button>
+    <md-button>About</md-button>
+  </span>
+  <md-menu class="main-menu-item">
+    <md-button ng-click="$mdOpenMenu($event)">
+      Tea Collection
+    </md-button>
+    <md-menu-content>
+      <md-menu-item>
+        <md-button ng-click="navCtrl.sampleAction('share', $event)">
+          Green Tea
+        </md-button>
+      </md-menu-item>
+      <md-menu-item>
+        <md-button ng-click="navCtrl.sampleAction('share', $event)">
+          Black Tea
+        </md-button>
+      </md-menu-item>
+    </md-menu-content>
+  </md-menu>
+</md-menu-bar>
+<!--<nav class="navbar">-->
+<!--<a class="main-menu-item" href="#">HOME</a>-->
+<!--<a class="main-menu-item" href="#">ABOUT</a>-->
+<!--<a class="main-menu-item" href="#">TEA COLLECTION</a>-->
+<!--</nav>-->
+

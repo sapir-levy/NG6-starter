@@ -1,0 +1,14 @@
+.menu-bar {
+  height: 40px;
+  text-align: center;
+  float:left;
+
+}
+
+.main-menu-item {
+  text-decoration: none;
+  margin: 5px 15px;
+  display: inline;
+  color:#b13729;
+}
+
