@@ -1,12 +1,21 @@
-.header{
+.header {
   position: fixed;
 }
 
-.main-content{
-  margin: 110px auto;
+.main-content {
+  display: block;
+  min-height: 100%;
+  height: 100%;
+  margin-top: 110px;
 }
 
-#tea-party-banner{
+.main-content:after {
+  content: "";
+  display: block;
+  height: 250px;
+}
+
+#tea-party-banner {
   width: 100%;
   height: 600px;
   display: block;
@@ -14,18 +23,18 @@
   margin-right: auto;
 }
 
-.exclusive-collection-container{
+.exclusive-collection-container {
   margin-left: 30px;
 }
 
-.exc-col-title{
+.exc-col-title {
   font-size: 30px;
 }
 
-.teas-container{
+.teas-container {
   margin: 40px;
 }
 
-.tea-thum{
+.tea-thum {
   margin: 20px 30px;
 }

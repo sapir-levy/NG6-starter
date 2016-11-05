@@ -1,6 +1,6 @@
 <md-menu-bar class="menu-bar">
   <span class="main-menu-item">
-    <md-button>Home</md-button>
+    <md-button ng-click="navCtrl.getTeas()">Home</md-button>
     <md-button>About</md-button>
   </span>
   <md-menu class="main-menu-item">
@@ -8,6 +8,11 @@
       Tea Collection
     </md-button>
     <md-menu-content>
+      <md-menu-item>
+        <md-button href="#" >
+          All
+        </md-button>
+      </md-menu-item>
       <md-menu-item>
         <md-button ng-click="navCtrl.sampleAction('share', $event)">
           Green Tea

@@ -1,0 +1,24 @@
+.inner-content{
+  padding:20px;
+  padding-bottom: 350px;
+}
+
+.exc-title{
+  width:300px;
+}
+
+md-ink-bar{
+  color:#b13729 !important;
+  background-color: #b13729 !important;
+}
+
+.md-tab.md-active{
+  color:black !important;
+}
+
+
+.tabs{
+  margin: 20px auto;
+  display: inline-block;
+  width: 100%;
+}
