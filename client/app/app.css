@@ -1,0 +1,61 @@
+*{
+  font-family: Raleway;
+  margin: 0;
+}
+
+
+html, body {
+  height: 100%;
+}
+
+.md-button:hover, .md-button:focus{
+  color:#b13729;
+}
+
+a , a:hover , a:focus{
+  color: #b13729;
+  text-decoration: none;
+}
+
+.header {
+  position: fixed;
+  z-index:100;
+}
+
+.main-content {
+  min-height: 100%;
+  height: 100%;
+  margin: 100px auto -4em;
+  background-color: white;
+}
+
+.main-content:after {
+  content: "";
+  display: block;
+  height: 130px;
+  clear: both;
+}
+
+.inner-content{
+  padding:20px;
+  padding-bottom: 50px;
+  background-color: white;
+}
+
+.title{
+  color: #b13729;
+  font-weight: bold;
+  font-size: 30px;
+  padding-left: 30px;
+  padding-top: 50px;
+}
+
+.colored-button-wrapper{
+  color: white;
+  background-color: #b13729;
+}
+
+.colored-button.md-button.md-ink-ripple:hover,
+.colored-button.md-button.md-ink-ripple:focus{
+  color: white;
+}

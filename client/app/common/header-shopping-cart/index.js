@@ -4,9 +4,9 @@ import './header-shopping-cart.css'
 const headerShoppingCartModule = angular.module('headerShoppingCart', []);
 
 class HeaderShopCartController {
-  constructor() {
+  constructor(ShoppingCart) {
     this.name = 'headerShoppingCart';
-    this.itemsInCart = 0;
+    this._shopCart = ShoppingCart;
   }
 }
 

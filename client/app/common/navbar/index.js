@@ -7,24 +7,10 @@ import './navbar.css'
 const navbarModule = angular.module('navbar', []);
 
 class NavbarController {
-  constructor(Teas) {
+  constructor() {
     'ngInject';
-    this._teas = Teas;
     this.name = 'navbar';
   }
-
-  getTeas(){
-    console.log("get teas in ctrl");
-    this._teas.getTeas().then(
-      (result) => {
-        this.teasCollection = result.data.hello;
-      },
-      (err) => {
-        console.log(err.data.errors);
-      }
-    );
-  }
-
 }
 
 navbarModule.component('navbar', {

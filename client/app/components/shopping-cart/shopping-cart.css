@@ -1,0 +1,19 @@
+.checkout-details{
+  position:relative;
+  left:100px;
+  margin-top:20px;
+  width:350px;
+}
+
+.checkout-btn-wrapper{
+  display: inline-block;
+}
+
+.total-price-checkout{
+  display: inline-block;
+  top: 35px;
+  position: relative;
+  color: #b13729;
+  font-size: large;
+  right: 30px;
+}

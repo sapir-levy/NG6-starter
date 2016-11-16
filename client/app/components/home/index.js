@@ -8,27 +8,33 @@ const homeModule = angular.module('home', [
 
 class HomeController {
   constructor() {
+    "ngInject"
     this.name = 'home';
+    window.scrollTo(0 , 0);
   }
 }
 
 homeModule.component('home', {
-  bindings: {},
+  bindings: {
+    teas: '<'
+  },
   template: require('./home.html'),
   controller: HomeController,
   controllerAs: 'homeCtrl'
 });
 
-homeModule.config(($stateProvider, $urlRouterProvider) => {
-    "ngInject";
+homeModule.config(($stateProvider, $urlRouterProvider ) => {
+  "ngInject";
 
-    $urlRouterProvider.otherwise('/');
-
-    $stateProvider
-      .state('home', {
-        url: '/',
-        component: 'home'
-      });
-  });
+  $urlRouterProvider.otherwise('/');
+  $stateProvider
+    .state('home', {
+      url: '/',
+      component: 'home',
+      resolve:{
+        teas: (Teas) => Teas.getExpensiveTeas(3)
+      }
+    });
+});
 
 export default homeModule.name;

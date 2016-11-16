@@ -1,34 +1,8 @@
 <md-menu-bar class="menu-bar">
-  <span class="main-menu-item">
-    <md-button ng-click="navCtrl.getTeas()">Home</md-button>
-    <md-button>About</md-button>
-  </span>
-  <md-menu class="main-menu-item">
-    <md-button ng-click="$mdOpenMenu($event)">
-      Tea Collection
-    </md-button>
-    <md-menu-content>
-      <md-menu-item>
-        <md-button href="#" >
-          All
-        </md-button>
-      </md-menu-item>
-      <md-menu-item>
-        <md-button ng-click="navCtrl.sampleAction('share', $event)">
-          Green Tea
-        </md-button>
-      </md-menu-item>
-      <md-menu-item>
-        <md-button ng-click="navCtrl.sampleAction('share', $event)">
-          Black Tea
-        </md-button>
-      </md-menu-item>
-    </md-menu-content>
-  </md-menu>
+  <div class="main-menu-item">
+    <md-button class="md-button" ng-href="/">Home</md-button>
+    <md-button class="md-button" ng-href="/about">About us</md-button>
+    <md-button class="md-button" ng-href="/collection">Tea Collection</md-button>
+  </div>
 </md-menu-bar>
-<!--<nav class="navbar">-->
-<!--<a class="main-menu-item" href="#">HOME</a>-->
-<!--<a class="main-menu-item" href="#">ABOUT</a>-->
-<!--<a class="main-menu-item" href="#">TEA COLLECTION</a>-->
-<!--</nav>-->
 

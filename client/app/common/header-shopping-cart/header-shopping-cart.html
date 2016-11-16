@@ -1,5 +1,6 @@
 <div class="shopping-cart">
-  <span><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></span>
-  <span class="num-of-items">{{ headerShopCartCtrl.itemsInCart }} item(s)</span>
-  <span class="total-price">$0.00</span>
+  <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+  <span class="num-of-items">{{ headerShopCartCtrl._shopCart.getQuantity() }} item(s)</span>
+  <span id="currency-default" class="total-price">{{headerShopCartCtrl._shopCart.getTotalPrice() | currency}}</span>
+  <a href="/cart">SHOPPING CART</a>
 </div>

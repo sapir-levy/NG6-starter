@@ -3,8 +3,10 @@
  */
 import angular from 'angular';
 import TeasService from './teas.service';
+import ShoppingCart from './shoppingCart.service'
 
-const servicesModule = angular.module('app.services' , []);
+const servicesModule = angular.module('app.Services' , []);
 servicesModule.service('Teas' , TeasService);
+servicesModule.service('ShoppingCart' , ShoppingCart);
 
 export default servicesModule.name;

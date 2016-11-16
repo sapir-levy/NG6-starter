@@ -1,7 +1,7 @@
 .footer{
   background-color: #b13729;
   height: 250px;
-  margin-top: -250px;
+  clear: both;
 }
 
 .container{
@@ -20,7 +20,7 @@
   margin: 7px 0;
 }
 
-.footer-menu-item:hover{
+.footer-menu-item:hover , .footer-menu-item:focus{
   color:white;
   text-decoration: none;
 }

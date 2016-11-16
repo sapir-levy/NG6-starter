@@ -1,0 +1,19 @@
+<div class="main-content">
+  <h1 class="title">SHOPPING CART</h1>
+  <div class="inner-content">
+    <div class="item-container" ng-if="shoppingCartCtrl.teas.length != 0">
+      <div ng-repeat="item in shoppingCartCtrl.teas">
+        <shopping-cart-item tea="item.product" quantity="item.quantity"></shopping-cart-item>
+      </div>
+      <div class="checkout-details pull-right">
+        <span class="total-price-checkout">Total Price: {{shoppingCartCtrl.shoppingCart.getTotalPrice() | currency}}</span>
+        <div class="colored-button-wrapper checkout-btn-wrapper pull-right">
+          <md-button class="colored-button" href="#">CONTINUE TO CHECKOUT</md-button>
+        </div>
+      </div>
+    </div>
+    <div ng-if="shoppingCartCtrl.teas.length == 0">
+      <empty-shopping-cart></empty-shopping-cart>
+    </div>
+  </div>
+</div>

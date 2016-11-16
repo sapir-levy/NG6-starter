@@ -1,17 +1,18 @@
-<app-header></app-header>
 <div class="main-content">
   <div class="inner-content text-center">
     <img class="exc-title" src="../../../img/whats_your_cup_of_tea.png">
     <div class="tabs">
-      <md-tabs md-center-tabs>
-        <md-tab label="All"></md-tab>
-        <md-tab label="Black"></md-tab>
-        <md-tab label="Herbal"></md-tab>
-        <md-tab label="Green"></md-tab>
-        <md-tab label="Fruit"></md-tab>
-        <md-tab label="Decaffeinated"></md-tab>
+      <md-tabs md-dynamic-height md-center-tabs >
+        <md-tab label="{{teaType}}" ng-repeat="teaType in teaCollectionCtrl.getTeaTypes()">
+          <div class="tea-content">
+            <ul class="list-inline">
+              <li class="collection-item" ng-repeat="item in teaCollectionCtrl.getTeasByCategory(teaType)">
+                <tea-thumbnail class="tea-thumbnail-item" tea="item"></tea-thumbnail>
+              </li>
+            </ul>
+          </div>
+        </md-tab>
       </md-tabs>
     </div>
   </div>
 </div>
-<app-footer></app-footer>

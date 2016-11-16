@@ -1,0 +1,7 @@
+.md-input-focused label{
+  color:#b13729 !important;
+}
+
+.md-input-focused .md-input{
+  border-color:#b13729 !important;
+}

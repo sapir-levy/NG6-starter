@@ -1,0 +1,25 @@
+<md-card class="item-container" md-theme="default" md-theme-watch>
+  <md-card-title>
+    <div class="md-media-lg card-media">
+      <img class="card-img" src="../../../img/teas/{{shoppingCartItemCtrl.tea.imgUrl}}">
+    </div>
+    <div class="item-details pull-left">
+      <div class="md-headline ">{{shoppingCartItemCtrl.tea.name}}</div>
+      <div class="price">Price: {{shoppingCartItemCtrl.tea.price | currency}}</div>
+    </div>
+    <md-card-actions class="actions pull-right" layout="row" layout-align="end center">
+      <md-input-container class="pull-left qty-input-shopping-cart">
+        <label>Quantity</label>
+        <input ng-model="shoppingCartItemCtrl.quantity" ng-click="shoppingCartItemCtrl.handleClick()" type="number"
+               min="1" step="1">
+      </md-input-container>
+      <span id="currency-default"
+            class="total-price-shopping-cart">{{shoppingCartItemCtrl.getItemTotalPrice() | currency}}</span>
+      <div class="delete-product">
+        <a href="#" ng-click="shoppingCartItemCtrl.shoppingCart.removeProduct(shoppingCartItemCtrl.tea)"><i
+          class="fa fa-trash-o fa-2x trash-icon" aria-hidden="true"></i></a>
+      </div>
+    </md-card-actions>
+  </md-card-title>
+</md-card>
+

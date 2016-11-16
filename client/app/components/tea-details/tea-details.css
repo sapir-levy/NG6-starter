@@ -1,0 +1,47 @@
+.tea-details-container {
+  width: 75%;
+}
+
+.main-details {
+  margin: auto;
+}
+
+.tea-name {
+  color: #b13729;
+  font-weight: bold;
+}
+
+.details-img {
+  width: 450px;
+}
+
+.description {
+  color: black;
+  display: inline-block;
+}
+
+.description-label {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #b13729;
+  padding-right: 5px;
+}
+
+.md-input-focused label {
+  color: #b13729 !important;
+}
+
+.md-input-focused .md-input {
+  border-color: #b13729 !important;
+}
+
+.product-input {
+  display: inline-block;
+  width: 270px;
+  padding: 0 20px;
+}
+
+.add-to-cart {
+  padding-top: 20px;
+}
+

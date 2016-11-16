@@ -1,0 +1,20 @@
+.problems-content {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.empty-shopping-container{
+  border-left: 3px solid #b13729;
+  margin: 20px;
+  padding:30px;
+}
+
+.continue-shopping-btn-wrapper{
+  width: 178px;
+  margin-top: 25px;
+  height: 36px;
+}
+
+.continue-shopping-btn{
+  top:-6px;
+}

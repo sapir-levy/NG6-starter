@@ -1,0 +1,8 @@
+.add-to-cart-btn{
+  color:#b13729;
+  text-decoration: none;
+}
+
+.add-to-cart-btn:hover {
+background-color: transparent;
+}

@@ -1,0 +1,23 @@
+<div class="main-content">
+  <div class="inner-content tea-details-container">
+    <h1 class="tea-name">{{teaDetailsCtrl.item.name}}</h1>
+    <div class="row main-details">
+      <img class="details-img img-thumbnail pull-left col-md-4" src="../../../img/teas/{{teaDetailsCtrl.item.imgUrl}}">
+      <p class="pull-right description col-md-6">{{teaDetailsCtrl.item.description}}</p>
+      <p class="col-md-6 pull-right"><span class="description-label">Ingredients: </span>{{teaDetailsCtrl.item.ingredients}}
+      </p>
+      <p class="col-md-6 pull-right">
+        <span class="description-label">Price: </span>
+        <span id="currency-default">{{teaDetailsCtrl.item.price | currency}}</span>
+      </p>
+      <div class="col-md-6 pull-left product-input">
+        <md-input-container class="pull-left quantity-input">
+          <label>Quantity</label>
+          <input ng-model="teaDetailsCtrl.quantity" type="number" min="1" step="1">
+        </md-input-container>
+      <add-to-cart-btn class="pull-right add-to-cart" tea="teaDetailsCtrl.item"
+                       quantity="teaDetailsCtrl.quantity"></add-to-cart-btn>
+      </div>
+    </div>
+  </div>
+</div>

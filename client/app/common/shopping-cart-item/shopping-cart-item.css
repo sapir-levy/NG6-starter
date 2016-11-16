@@ -1,0 +1,52 @@
+.item-container{
+  width: 700px;
+  height: 150px;
+}
+
+.card-img{
+  display: inline-block !important;
+  height: 100px;
+}
+
+.item-details{
+  display: inline-block;
+  margin: auto 0;
+  width:300px;
+}
+
+.md-headline{
+  margin: auto 15px;
+  font-size: 1.2em !important;
+}
+
+.price{
+  margin: auto 15px;
+
+}
+
+md-card md-card-title md-card-title-text{
+  display: inline-block !important;
+  padding:0;
+}
+
+.actions{
+  margin-bottom: 5px;
+  left:170px;
+  position: relative;
+  width:130px;
+}
+
+.trash-icon{
+  padding-top: 5px;
+}
+
+.qty-input-shopping-cart{
+  width: 70px;
+  top: 13px;
+  right: 120px;
+}
+
+.total-price-shopping-cart{
+  position: relative;
+  left: -75px;
+}
