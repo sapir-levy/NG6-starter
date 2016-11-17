@@ -10,6 +10,7 @@ class AboutController {
   constructor() {
     "ngInject"
     this.name = 'about';
+    window.scrollTo(0 , 0);
   }
 }
 

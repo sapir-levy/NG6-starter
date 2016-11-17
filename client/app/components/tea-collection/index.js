@@ -9,6 +9,7 @@ const teaCollectionModule = angular.module('teaCollection', [
 class TeaCollection {
   constructor() {
     this.name = 'teaCollection';
+    window.scrollTo(0 , 0);
   }
 
   getTeasByCategory(category){

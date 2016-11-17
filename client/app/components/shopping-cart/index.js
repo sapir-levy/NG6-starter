@@ -11,6 +11,7 @@ class ShoppingCartController {
     "ngInject"
     this.name = 'shoppingCart';
     this.shoppingCart = ShoppingCart;
+    window.scrollTo(0 , 0);
   }
 }
 

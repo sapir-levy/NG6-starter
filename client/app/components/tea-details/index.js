@@ -10,6 +10,7 @@ class TeaDetails {
   constructor() {
     this.name = 'teaDetails';
     this.quantity = 1;
+    window.scrollTo(0 , 0);
   }
 }
 
