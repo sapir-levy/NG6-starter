@@ -1,7 +1,7 @@
 {
-  "name": "tea-party",
+  "name": "tea-time",
   "version": "0.0.1",
-  "description": "Tea Party Shop - iangles project",
+  "description": "Tea Time Shop - iangles project",
   "main": "index.js",
   "dependencies": {
     "angular": "^1.5.0",
