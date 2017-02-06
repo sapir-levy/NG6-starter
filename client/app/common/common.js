@@ -8,6 +8,7 @@ import QuantityInput from './quantity-input';
 import AddToCartBtn from './add-to-cart-btn';
 import ShoppingCartItem from './shopping-cart-item';
 import EmptyShoppingCart from './empty-shopping-cart';
+import Search from './search';
 
 const commonModule = angular.module('app.common', [
   Navbar,
@@ -18,7 +19,8 @@ const commonModule = angular.module('app.common', [
   QuantityInput,
   AddToCartBtn,
   ShoppingCartItem,
-  EmptyShoppingCart
+  EmptyShoppingCart,
+  Search
 ])
 .name;
 

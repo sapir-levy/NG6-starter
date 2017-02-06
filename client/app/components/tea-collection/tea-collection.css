@@ -1,5 +1,7 @@
 .exc-title{
   width:300px;
+  display: block;
+  margin: auto;
 }
 
 md-ink-bar{
@@ -7,17 +9,30 @@ md-ink-bar{
   background-color: #b13729 !important;
 }
 
+md-tabs-content-wrapper {
+  margin: auto;
+  display: inline-block;
+}
+
 .md-tab.md-active{
   color:black !important;
 }
-
 
 .tabs{
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  width: 70%;
+  margin: auto;;
 }
 
 .collection-item{
   margin: 30px 20px;
+}
+
+.search-container{
+  width: 15%;
+  top: 60px;
+  position: absolute;
+  left: 25px;
 }

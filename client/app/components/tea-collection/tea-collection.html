@@ -1,12 +1,16 @@
 <div class="main-content">
   <div class="inner-content text-center">
     <img class="exc-title" src="../../../img/whats_your_cup_of_tea.png">
+    <md-input-container class="search-container" md-no-float class="md-block">
+      <input ng-model="teaCollectionCtrl.searchString" ng-keyup="teaCollectionCtrl.applySearch()" placeholder="Search">
+    </md-input-container>
     <div class="tabs">
-      <md-tabs md-dynamic-height md-center-tabs >
-        <md-tab label="{{teaType}}" ng-repeat="teaType in teaCollectionCtrl.getTeaTypes()">
+      <md-tabs md-dynamic-height md-center-tabs>
+        <md-tab label="{{teaType}}" ng-repeat="teaType in teaCollectionCtrl.teaTypes"
+                ng-click="teaCollectionCtrl.teasService.getTeasByCategory(teaType)">
           <div class="tea-content">
             <ul class="list-inline">
-              <li class="collection-item" ng-repeat="item in teaCollectionCtrl.getTeasByCategory(teaType)">
+              <li class="collection-item" ng-repeat="item in teaCollectionCtrl.teasService.currentTeas">
                 <tea-thumbnail class="tea-thumbnail-item" tea="item"></tea-thumbnail>
               </li>
             </ul>

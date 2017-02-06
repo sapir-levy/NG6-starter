@@ -1,6 +1,3 @@
-/**
- * Created by Sapir on 05/11/2016.
- */
 export default class Teas {
   constructor($http, $q) {
     'ngInject';
@@ -8,6 +5,9 @@ export default class Teas {
     this._$http = $http;
     this._$q = $q;
     this.list = null;
+    this.currentTeas = this.list;
+    this.currentCategory = 'All';
+    this.getAllTeas();
   }
 
   getAllTeas() {
@@ -15,9 +15,10 @@ export default class Teas {
       return this._$q.resolve(this.list);
     }
 
-    return this._$http.get("http://localhost:3000/teas")
+    return this._$http.get("http://localhost:8080")
       .then((response) => {
-        this.list = response.data;
+        this.list = response.data.teas;
+        this.currentTeas = this.list;
         return this.list;
       });
   }
@@ -28,9 +29,41 @@ export default class Teas {
     })
   }
 
-  getTeaById(id){
+  getTeaById(id) {
     return this.getAllTeas().then((teas) => {
       return teas.filter(t => t.id == id)[0];
     })
+  }
+
+  getTeaTypes() {
+    return this.getAllTeas().then((teas) => {
+      const teaTypes = ['All'];
+      teas.filter(t => {
+         return teaTypes.indexOf(t.teaType) == -1 && teaTypes.push(t.teaType);
+      });
+      return teaTypes;
+    });
+  }
+
+
+  getTeasByCategory(category) {
+    this.currentCategory = category;
+
+    if (category == 'All') {
+      return this.getAllTeas().then((teas) => {
+        this.currentTeas = teas;
+        return this.currentTeas;
+      });
+    }
+    else {
+      return this.getAllTeas().then((teas) => {
+        this.currentTeas = teas.filter(t=> t.teaType == category);
+        return this.currentTeas;
+      });
+    }
+  }
+
+  getTeasByName(searchedTea){
+
   }
 }

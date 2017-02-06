@@ -1,7 +1,9 @@
 .footer{
   background-color: #b13729;
-  height: 250px;
+  min-height: 250px;
   clear: both;
+  bottom: 0;
+  width: 100%;
 }
 
 .container{
