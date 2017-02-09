@@ -2,6 +2,7 @@
   text-align: center;
   display: inline-block;
   border: 1px solid lightgray;
+  border-radius: 0 0 5px 5px;
 }
 
 .container-link{

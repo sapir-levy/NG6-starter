@@ -7,6 +7,7 @@ export default class Teas {
     this.list = null;
     this.currentTeas = this.list;
     this.currentCategory = 'All';
+    this.checkedCaffeineLevel = [];
     this.getAllTeas();
   }
 
@@ -31,7 +32,7 @@ export default class Teas {
 
   getTeaById(id) {
     return this.getAllTeas().then((teas) => {
-      return teas.filter(t => t.id == id)[0];
+      return teas.filter(t => t._id == id)[0];
     })
   }
 
@@ -39,7 +40,7 @@ export default class Teas {
     return this.getAllTeas().then((teas) => {
       const teaTypes = ['All'];
       teas.filter(t => {
-         return teaTypes.indexOf(t.teaType) == -1 && teaTypes.push(t.teaType);
+        return teaTypes.indexOf(t.teaType) == -1 && teaTypes.push(t.teaType);
       });
       return teaTypes;
     });
@@ -63,7 +64,51 @@ export default class Teas {
     }
   }
 
-  getTeasByName(searchedTea){
+  search(searchString) {
+    if (searchString == "")
+      this.getTeasByCategory(this.currentCategory).then(teas => {
+        this.currentTeas = teas;
+        this.filterByCaffeineLevel();
+      });
+    else {
+      this.getTeasByCategory(this.currentCategory).then(teas => {
+        this.currentTeas = teas.filter(t =>
+          t.name.toLowerCase().includes(searchString));
+      });
+    }
+  }
 
+  getAvailableCaffeineLevel() {
+    return this.currentTeas.reduce((c, tea) => {
+      if (!c.find(l => l.level == tea.caffeineLevel))
+        c.push({level: tea.caffeineLevel, checked: false});
+
+      return c;
+    }, []);
+  }
+
+  filterByCaffeineLevel(caffeineLevel, checked) {
+    if (checked)
+      this.checkedCaffeineLevel.push(caffeineLevel);
+    else {
+      const indexToRemove = this.checkedCaffeineLevel.indexOf(caffeineLevel);
+      if (indexToRemove != -1)
+        this.checkedCaffeineLevel.splice(indexToRemove, 1);
+    }
+
+    if (this.checkedCaffeineLevel.length != 0) {
+      this.getTeasByCategory(this.currentCategory).then(list => {
+        this.currentTeas = list.reduce((teas, tea) => {
+          if (this.checkedCaffeineLevel.includes(tea.caffeineLevel))
+            teas.push(tea);
+          return teas;
+        }, []);
+      });
+    }
+    else {
+      this.getTeasByCategory(this.currentCategory).then(list => {
+        this.currentTeas = list;
+      });
+    }
   }
 }

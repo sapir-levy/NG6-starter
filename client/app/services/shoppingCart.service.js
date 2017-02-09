@@ -14,9 +14,7 @@ class ShoppingCart {
   }
 
   removeProduct(product) {
-    console.log(product);
     const requestedTea = this.products.find( x => x.product == product);
-    console.log(requestedTea);
     const productIndex = this.products.indexOf(requestedTea);
     if (productIndex > -1) {
       this.products.splice(productIndex, 1);
@@ -43,6 +41,10 @@ class ShoppingCart {
     }
 
     return totalPrice;
+  }
+
+  submitCheckout(){
+
   }
 
 }

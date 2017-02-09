@@ -8,7 +8,7 @@ import Services from './services';
 import AppComponent from './app.component';
 import 'normalize.css';
 import 'angular-material/angular-material.css';
-import './app.css'
+import './app.css';
 
 angular.module('app', [
   uiRouter,

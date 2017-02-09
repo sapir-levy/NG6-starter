@@ -1,13 +1,27 @@
 <div class="main-content">
   <div class="inner-content text-center">
     <img class="exc-title" src="../../../img/whats_your_cup_of_tea.png">
-    <md-input-container class="search-container" md-no-float class="md-block">
-      <input ng-model="teaCollectionCtrl.searchString" ng-keyup="teaCollectionCtrl.applySearch()" placeholder="Search">
-    </md-input-container>
+    <aside class="search-container">
+      <md-input-container md-no-float class="md-block">
+        <input ng-model="teaCollectionCtrl.searchString" ng-keyup="teaCollectionCtrl.applySearch()"
+               placeholder="Search">
+      </md-input-container>
+      <div>
+        <h4>Caffeine Level</h4>
+        <label><input type="checkbox" ng-model="teaCollectionCtrl.none"
+                      ng-click="teaCollectionCtrl.teasService.filterByCaffeineLevel('none' ,teaCollectionCtrl.none )">None</label>
+        <label><input type="checkbox" ng-model="teaCollectionCtrl.low"
+                      ng-click="teaCollectionCtrl.teasService.filterByCaffeineLevel('low' , teaCollectionCtrl.low)">Low</label>
+        <label><input type="checkbox" ng-model="teaCollectionCtrl.medium"
+                      ng-click="teaCollectionCtrl.teasService.filterByCaffeineLevel('medium', teaCollectionCtrl.medium)">Medium</label>
+        <label><input type="checkbox" ng-model="teaCollectionCtrl.high"
+                      ng-click="teaCollectionCtrl.teasService.filterByCaffeineLevel('high', teaCollectionCtrl.high)">High</label>
+      </div>
+    </aside>
     <div class="tabs">
       <md-tabs md-dynamic-height md-center-tabs>
         <md-tab label="{{teaType}}" ng-repeat="teaType in teaCollectionCtrl.teaTypes"
-                ng-click="teaCollectionCtrl.teasService.getTeasByCategory(teaType)">
+                ng-click="teaCollectionCtrl.handleClick(teaType)">
           <div class="tea-content">
             <ul class="list-inline">
               <li class="collection-item" ng-repeat="item in teaCollectionCtrl.teasService.currentTeas">

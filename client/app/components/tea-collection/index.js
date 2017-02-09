@@ -12,23 +12,33 @@ class TeaCollection {
     this.name = 'teaCollection';
     window.scrollTo(0, 0);
     this.teasService = Teas;
+    this.searchString = "";
+    this.resetCaffeineLevel();
   }
 
-  handleClick(teaType){
-    this.currentTeas = this.teasService.getTeasByCategory(teaType);
+  handleClick(teaType) {
+    this.searchString = "";
+    this.teasService.checkedCaffeineLevel = [];
+    this.resetCaffeineLevel();
+    this.teasService.getTeasByCategory(teaType);
   }
 
   applySearch() {
-    this.currentTeas = this.getTeasByCategory(this.currentCategory)
-      .filter(t => t.name.toLowerCase().search(this.searchString.toLowerCase()) != -1);
-    return this.currentTeas;
+    this.teasService.search(this.searchString);
+  }
+
+  resetCaffeineLevel(){
+    this.none = false;
+    this.low = false;
+    this.medium = false;
+    this.high = false;
   }
 }
 
 teaCollectionModule.component('teaCollection', {
   bindings: {
     teaTypes: '<',
-    currentTeas:'<',
+    currentTeas: '<',
     searchString: '<'
   },
   template: require('./tea-collection.html'),

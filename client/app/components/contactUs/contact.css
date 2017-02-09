@@ -1,0 +1,15 @@
+#map {
+  width: 40%;
+  height: 300px;
+  background-color: grey;
+  margin: 0 auto;
+}
+
+.contactUs-content{
+  margin: 0 20px;
+}
+
+.inner-title{
+  color:#b13729;
+  text-decoration: underline;
+}
